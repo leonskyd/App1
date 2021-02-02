@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">App1</string>
+    <string name="app_name">Проверь число</string>
+    <string name="string1">Начать</string>
+    <string name="string2">введите число</string>
+    <string name="string3">проверка на 3</string>
+    <string name="string4">проверка на 7</string>
+    <string name="string5">Все сразу</string>
+    <string name="string6">проверить всё</string>
+    <string name="string7">Да</string>
+    <string name="string8">Нет</string>
 </resources>
