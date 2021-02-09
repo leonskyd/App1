@@ -148,7 +148,7 @@
         // почему цвет изменяет размеры кнопок и не отображается корректно ?
 
         <Button
-            android:id="@+id/button_equal"
+            android:id="@+id/button_result"
             android:layout_width="@dimen/button_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin"
