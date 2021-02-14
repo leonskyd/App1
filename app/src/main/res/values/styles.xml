@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <style name="AppTheme" parent = "Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">teal_200</item>
+        <item name="colorPrimaryDark">purple_700</item>
+        <item name="colorAccent">tonal</item>
+    </style>-->
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">@dimen/button_size</item>
+        <item name="android:textSize">@dimen/button_text</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+
+    <style name="EmptyButton" parent="ButtonStyle">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextButton" parent="ButtonStyle">
+        <item name="android:layout_height">@dimen/button_size</item>
+    </style>
+
+</resources>

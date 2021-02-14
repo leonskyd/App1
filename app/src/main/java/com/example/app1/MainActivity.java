@@ -11,20 +11,21 @@ import java.util.ArrayList;
 import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
-
+    
     Integer a;
     Integer b;
-    Integer result;
     String action;
     String numb;
-    EditText tableau;
+    EditText editText;
+    Calculator calculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator_grid);
-
-        tableau = findViewById(R.id.editText);
+        
+        calculator = new Calculator();
+        editText = findViewById(R.id.editText);
 
         Button button1 = findViewById(R.id.button_1);
         button1.setOnClickListener(this);
@@ -64,25 +65,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         result.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    b = parseInt(String.valueOf(tableau.getText()));
-                    if (action == "sum") {
-                        tableau.setText (a + b);
-                    }
-                    if (action == "prod") {
-                        tableau.setText (a * b);
-                    }
-                    if (action == "diff") {
-                        tableau.setText (a - b);
-                    }
-                    if (action == "quot") {
-                        tableau.setText (a /b);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    tableau.setText (" Not done ");
-                } finally { tableau.setText (" error !");
-                }
+                    b = parseInt(String.valueOf(editText.getText()));
+                    int result = calculator.Count(a,b,action);
+                    editText.setText(String.valueOf(result));
             }
         });
     }
@@ -93,67 +78,67 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         switch (v.getId()) {
             case R.id.button_1:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "1");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "1");
                 break;
             case R.id.button_2:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "2");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "2");
                 break;
             case R.id.button_3:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "3");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "3");
                 break;
             case R.id.button_4:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "4");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "4");
                 break;
             case R.id.button_5:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "5");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "5");
                 break;
             case R.id.button_6:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "6");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "6");
                 break;
             case R.id.button_7:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "7");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "7");
                 break;
             case R.id.button_8:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "8");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "8");
                 break;
             case R.id.button_9:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "9");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "9");
                 break;
             case R.id.button_zero:
-                numb = String.valueOf(tableau.getText());
-                tableau.setText(numb + "0");
+                numb = String.valueOf(editText.getText());
+                editText.setText(numb + "0");
                 break;
             case R.id.button_plus:
-                a = Integer.parseInt(tableau.getText().toString());
+                a = Integer.parseInt(editText.getText().toString());
                 action = "sum";
-                tableau.setText(" ");
+                editText.setText("");
                 break;
             case R.id.button_minus:
-                a = parseInt(String.valueOf(tableau.getText()));
+                a = parseInt(String.valueOf(editText.getText()));
                 action = "diff";
-                tableau.setText(" ");
+                editText.setText("");
                 break;
             case R.id.button_mult:
-                a = parseInt(String.valueOf(tableau.getText()));
+                a = parseInt(String.valueOf(editText.getText()));
                 action = "prod";
-                tableau.setText(" ");
+                editText.setText("");
                 break;
             case R.id.button_divide:
-                a = parseInt(String.valueOf(tableau.getText()));
+                a = parseInt(String.valueOf(editText.getText()));
                 action = "quot";
-                tableau.setText(" ");
+                editText.setText("");
                 break;
             case R.id.button_delete:
-                tableau.setText(" ");
+                editText.setText("");
                 break;
         }
     }
