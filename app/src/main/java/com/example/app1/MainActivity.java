@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator_grid);
         
+        setDayNight();
+        
         calculator = new Calculator();
         editText = findViewById(R.id.editText);
 
@@ -72,6 +74,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         });
     }
 
+      private void setDayNight() {
+        Switch switch1 = findViewById(R.id.dayNight);
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
+    }
 
     @Override
     public void onClick(View v) {
