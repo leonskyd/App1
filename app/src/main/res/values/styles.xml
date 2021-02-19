@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WindowStyle">
+        <item name="android:layout_width">@dimen/window_width</item>
+        <item name="android:layout_marginLeft">@dimen/marginBorder</item>
+        <item name="android:layout_marginTop">@dimen/marginBorder</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">@dimen/content_text</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@color/white</item>
+    </style>
+</resources>
+
