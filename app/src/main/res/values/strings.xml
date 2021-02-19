@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">QuickNote</string>
+   <string name="app_name">QuickNote</string>
+    <string name="save">Save</string>
+    <string name="edit">edit</string>
+    <string name="delete">delete</string>
+    <string name="back">back</string>
  </resources>
