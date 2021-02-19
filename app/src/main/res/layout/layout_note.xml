@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:background="@color/teal_200">
+
+    <EditText
+        android:id="@+id/editName"
+        style="@style/WindowStyle"
+        android:layout_height="@dimen/window_height" />
+
+    <EditText
+        android:id="@+id/editTopic"
+        style="@style/WindowStyle"
+        android:layout_height="@dimen/window_height" />
+
+
+    <EditText
+        android:id="@+id/editDate"
+        style="@style/WindowStyle"
+        android:layout_height="@dimen/window_height" />
+
+    <EditText
+        android:id="@+id/editContent"
+        style="@style/WindowStyle"
+        android:layout_height="@dimen/contentWindow" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_height"
+        android:layout_marginLeft="@dimen/marginBorder"
+        android:text="@string/save"/>
+
+    <Button
+        android:id="@+id/delButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_height"
+        android:layout_marginLeft="@dimen/marginBorder"
+        android:text="@string/delete"
+       />
+
+</LinearLayout>
+
+<!--доделать чтобы текст заметки переходил со строки на строку
+выравнивание по верху и по центру-->

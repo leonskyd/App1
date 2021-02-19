@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:background="@color/teal_200">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="@dimen/marginBorder"
+        android:background="@color/white"
+        android:text="TextView"
+        android:textSize="@dimen/content_text" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_height"
+        android:layout_marginLeft="@dimen/marginBorder"
+        android:text="@string/back"/>
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_height"
+        android:layout_marginLeft="@dimen/marginBorder"
+        android:text="@string/edit"
+        />
+
+</LinearLayout>
