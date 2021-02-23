@@ -16,8 +16,13 @@
         android:text="TextView"
         android:textSize="@dimen/content_text" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
     <Button
-        android:id="@+id/backButton"
+        android:id="@+id/backToList"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/window_height"
         android:layout_marginLeft="@dimen/marginBorder"
@@ -28,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/window_height"
         android:layout_marginLeft="@dimen/marginBorder"
-        android:text="@string/edit"
-        />
+        android:text="@string/edit" />
 
+    </LinearLayout>
 </LinearLayout>
