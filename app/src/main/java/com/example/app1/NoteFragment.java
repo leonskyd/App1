@@ -17,10 +17,10 @@ public class NoteFragment extends Fragment { // Фрагмент в которо
 
     EditText editName; EditText editDate;
     EditText editContent; EditText editTopic;
-    Button saveButton; Button delButton;
+    Button saveButton; Button delButton; Button listButton;
     String name; String date; String topic; String content;
     Note note;
-    ArrayList<Note> blockNote = new ArrayList<>();
+    //ArrayList<Note> blockNote = new ArrayList<>();
 
 
     @Override
@@ -33,6 +33,7 @@ public class NoteFragment extends Fragment { // Фрагмент в которо
         editContent = view.findViewById(R.id.editContent);
         saveButton = view.findViewById(R.id.saveButton);
         delButton = view.findViewById(R.id.delButton);
+        listButton = view.findViewById(R.id.listButton);
         return view;
     }
 
@@ -41,6 +42,20 @@ public class NoteFragment extends Fragment { // Фрагмент в которо
         super.onViewCreated(view, savedInstanceState);
         initSave();
         initDel();
+        initList();
+    }
+    
+     private void initList() {
+        listButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Fragment fragment = new ListFragment();
+               FragmentManager fragmentManager= getFragmentManager();
+               FragmentTransaction ft = fragmentManager.beginTransaction();
+               ft.replace(R.id.fragment_container, fragment);
+               ft.commit();
+            }
+        });
     }
 
 
@@ -63,7 +78,7 @@ public class NoteFragment extends Fragment { // Фрагмент в которо
                 date = String.valueOf(editDate.getText());
                 content = String.valueOf(editContent.getText());
                 note = new Note(name, topic, date, content);
-                blockNote.add(note);
+                //blockNote.add(note);
             }
         });
     }

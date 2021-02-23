@@ -13,11 +13,19 @@ public class MainActivity extends AppCompatActivity {
        5. Make land-realization
     *
     * */
+ Fragment fragment;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        fragment = new NoteFragment();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.fragment_container, fragment);
+        ft.commit();
     }
+
+
 }

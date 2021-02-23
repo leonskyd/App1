@@ -27,20 +27,38 @@
         style="@style/WindowStyle"
         android:layout_height="@dimen/contentWindow" />
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/window_height"
-        android:layout_marginLeft="@dimen/marginBorder"
-        android:text="@string/save"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/delButton"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/window_height"
-        android:layout_marginLeft="@dimen/marginBorder"
-        android:text="@string/delete"
-       />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_height"
+            android:layout_marginLeft="@dimen/marginBorder"
+            android:text="@string/save"/>
+
+        <Button
+            android:id="@+id/delButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_height"
+            android:layout_marginLeft="@dimen/marginBorder"
+            android:text="@string/delete" />
+
+       <Button
+           android:id="@+id/listButton"
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/window_height"
+           android:layout_marginLeft="@dimen/marginBorder"
+           android:text="@string/list" />
+
+
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
 
