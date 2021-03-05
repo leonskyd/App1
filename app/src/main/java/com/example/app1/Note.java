@@ -5,23 +5,44 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class Note {
-    private int index;
+public class Note implements Serializable {
+    private String index;
     private String name;
     private String content;
     private String date;
-    private String topic;
+    //private String topic;
 
-    public Note(String name, String topic, String date, String content) {
-        this.name = name;
-        this.content = content;
 
-        /*Date currentDate = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());*/
-        this.date = date; //Format.format(currentDate);
 
-        this.topic = topic;
+    public String getIndex() {
+        return index;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setIndex(String index) {
         this.index = index;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
